@@ -1,0 +1,57 @@
+<form [formGroup]="viajesForm" (ngSubmit)="guardarClick(viajesForm)" [ngClass]="{submited: submited}">
+    <fieldset>
+        <legend>
+            <h1 class="back"> <i class="fas fa-arrow-left" [routerLink]="['/viajes']"></i> Viajes</h1>
+        </legend>
+        <div class="flex-row">
+            <div class="field-element">
+                <label for="">Nombre: </label>
+                <input id="" type="text" formControlName="nombre">
+            </div>
+            <div class="field-element">
+                <label for="">Destino: </label>
+                <input id="" type="text" formControlName="destino">
+                <span class="error" *ngIf="viajesForm.controls.destino.hasError('invalidDestination')">Restriccion
+                    COVID</span>
+            </div>
+            <div class="field-element">
+                <label for="">Duracion: </label>
+                <input id="" type="number" formControlName="duracion">
+            </div>
+            <div class="field-element">
+                <label for="">Tipo de Viaje: </label>
+                <select id="" formControlName="tipoDeViajeId">
+                    <option *ngFor="let item of tiposDeViaje" [ngValue]="item.id">{{item.nombre}}</option>
+                </select>
+            </div>
+            <div class="field-element">
+                <label for="">Plazas: </label>
+                <input id="" type="number" formControlName="plazas">
+            </div>
+            <div class="field-element">
+                <label for="">Fecha: </label>
+                <input id="" type="date" formControlName="fecha">
+            </div>
+            <div class="field-element">
+                <label for="">Precio: </label>
+                <input id="" type="number" formControlName="precio">
+            </div>
+            <div class="field-element">
+                <label for="">Estado: </label>
+                <select id="" formControlName="estado">
+                </select>
+            </div>
+            <div class="field-element">
+                <label for="">Oferta: </label>
+                <select id="" formControlName="enOferta">
+                    <option value="true">Si</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+        </div>
+    </fieldset>
+    <div class="row-buttons">
+        <button class="btn btn-primary" type="submit">Guardar</button>
+        <button class="btn btn-secondary" type="button" (click)="resetForm()">Nuevo Viaje</button>
+    </div>
+</form>

@@ -1,0 +1,56 @@
+table {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  width: 100%;
+
+  th {
+    text-align: left;
+    padding: 20px;
+    padding-left: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: darkblue;
+  }
+
+  tr {
+    &:hover {
+      background-color: beige;
+      cursor: pointer;
+    }
+  }
+
+  td {
+    padding: 20px;
+    padding-left: 30px;
+
+    &.center {
+      text-align: center;
+    }
+
+    &.right {
+      text-align: right;
+    }
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
+
+  .en-oferta {
+    // background-color: rgba(247, 133, 133, 0.315);
+    color: rgb(98, 16, 16);
+    font-weight: bold;
+  }
+}
+
+.fa-lock-open {
+  color: green;
+}
+
+.fa-lock {
+  color: red;
+}

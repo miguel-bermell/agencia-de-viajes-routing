@@ -1,1 +1,199 @@
 /* You can add global styles to this file, and also import other style files */
+// .btn {
+//   width: 200px;
+//   margin-right: 20px;
+//   height: 34px;
+//   color: #000;
+//   border-color: rgba(0, 0, 0, 0.12);
+//   background-color: white;
+//   box-shadow: 0 0 0 0 rgb(0 0 0 / 20%), 0 0 0 0 rgb(0 0 0 / 14%),
+//     0 0 0 0 rgb(0 0 0 / 12%);
+
+//   &:hover {
+//     background-color: rgba(128, 128, 128, 0.199);
+//     cursor: pointer;
+//   }
+
+//   &.primary {
+//     color: #3f51b5;
+//     background: white;
+
+//     &:hover {
+//       background-color: #3f51b52a;
+//     }
+
+//     &:disabled {
+//       background-color: gray !important;
+//     }
+//   }
+// }
+
+.row-buttons {
+  display: flex;
+  flex-flow: row-reverse;
+  button {
+    margin-left: 20px;
+  }
+}
+
+:host {
+}
+
+fieldset {
+  padding: 20px;
+  margin: 20px;
+
+  legend {
+    h1 {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.row-buttons {
+  margin-top: 40px;
+}
+
+.submited {
+  input {
+    &.ng-invalid {
+      border-bottom: 1px solid red !important;
+    }
+  }
+
+  select {
+    &.ng-invalid {
+      border-bottom: 1px solid red !important;
+    }
+  }
+}
+.field-element {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 200px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  label {
+    text-transform: uppercase;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid gray;
+    height: 32px;
+    font-size: 1.1rem;
+    outline: none;
+
+    &:focus {
+      border-bottom: 2px solid #3f51b5;
+    }
+
+    &.ng-touched {
+      &.ng-invalid {
+        border-bottom: 1px solid red !important;
+      }
+    }
+  }
+
+  select {
+    border: none;
+    height: 32px;
+    border-bottom: 1px solid gray;
+    font-size: 1.1rem;
+    outline: none;
+    &.ng-dirty {
+      &.ng-invalid {
+        border: 1px solid red !important;
+      }
+    }
+
+    &:focus {
+      border-bottom: 2px solid #3f51b5;
+    }
+
+    &.ng-dirty {
+      &.ng-invalid {
+        border: 1px solid red !important;
+      }
+    }
+  }
+}
+
+span {
+  &.error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+}
+table {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  width: 100%;
+
+  thead {
+  }
+
+  th {
+    text-align: left;
+    padding: 20px;
+    padding-left: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: darkblue;
+  }
+
+  tr {
+    &:hover {
+      background-color: beige;
+      cursor: pointer;
+    }
+  }
+
+  td {
+    padding: 20px;
+    padding-left: 30px;
+
+    &.center {
+      text-align: center;
+    }
+
+    &.right {
+      text-align: right;
+    }
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
+
+  .en-oferta {
+    // background-color: rgba(247, 133, 133, 0.315);
+    color: rgb(98, 16, 16);
+    font-weight: bold;
+  }
+}
+
+table {
+  margin: 2rem 0;
+}
+
+.back {
+  margin-bottom: 2rem;
+  i {
+    color: rgb(0, 26, 82);
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+}

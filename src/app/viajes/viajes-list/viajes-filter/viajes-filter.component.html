@@ -1,0 +1,29 @@
+<form [formGroup]="filterForm" (ngSubmit)="searchClick(filterForm)">
+  <fieldset>
+    <legend>
+      <h1> Filtrar Viajes</h1>
+    </legend>
+    <div class="flex-row">
+      <div class="field-element">
+        <label for="">Nombre: </label>
+        <input id="" type="text" formControlName="nombre">
+      </div>
+      <div class="field-element">
+        <label for="">Destino: </label>
+        <input id="" type="text" formControlName="destino">
+      </div>
+      <div class="field-element">
+        <label for="">Tipo de Viaje: </label>
+        <select id="" formControlName="tipoDeViajeId">
+          <!-- <option [ngValue]=""></option> -->
+          <option *ngFor="let item of tiposDeViaje" [ngValue]="item.id">{{item.nombre}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row-buttons">
+      <button class="btn btn-primary" type="submit">Buscar</button>
+      <button class="btn btn-secondary" type="button" (click)="limpiarFiltro()">Limpiar filtro</button>
+    </div>
+  </fieldset>
+
+</form>

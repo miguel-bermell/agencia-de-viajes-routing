@@ -1,0 +1,47 @@
+<form [formGroup]="clientesForm" (ngSubmit)="guardarClick(clientesForm)">
+  <fieldset>
+    <legend>
+      <h1 class="back"> <i class="fas fa-arrow-left" [routerLink]="['/clientes']"></i> Clientes</h1>
+    </legend>
+    <div class="flex-row">
+      <div class="field-element">
+        <label for="">Nombre: </label>
+        <input id="" type="text" formControlName="nombre">
+      </div>
+      <div class="field-element">
+        <label for="">Apellidos: </label>
+        <input id="" type="text" formControlName="apellidos">
+      </div>
+      <div class="field-element">
+        <label for="">Email: </label>
+        <input id="" type="email" formControlName="email">
+      </div>
+      <div class="field-element">
+        <label for="">Estado Civil: </label>
+        <select id="" formControlName="estadoCivilId">
+          <option *ngFor="let item of estadoCivil" [ngValue]="item.id">{{item.descripcion}}</option>
+        </select>
+      </div>
+      <div class="field-element">
+        <label for="">DNI: </label>
+        <input id="" type="text" formControlName="dni">
+      </div>
+      <div class="field-element">
+        <label for="">Fecha de nacimiento: </label>
+        <input id="" type="date" formControlName="fechaNacimiento">
+      </div>
+      <div class="field-element">
+        <label for="">Teléfono: </label>
+        <input id="" type="tel" formControlName="telefono">
+      </div>
+      <div class="field-element">
+        <label for="">Dirección: </label>
+        <input id="" type="text" formControlName="direccion">
+      </div>
+    </div>
+  </fieldset>
+  <div class="row-buttons">
+    <button class="btn btn-primary" type="submit">Guardar</button>
+    <button class="btn btn-secondary" type="button" (click)="resetForm()">Nuevo Cliente</button>
+  </div>
+</form>
